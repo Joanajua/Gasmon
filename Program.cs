@@ -7,15 +7,13 @@ using Amazon;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections.Generic;
-using Amazon.SimpleNotificationService.Util;
 using Amazon.SQS.Model;
 using Newtonsoft.Json;
 using System.Timers;
 using System.Linq;
-using System.Text;
-using System.IO;
 
-namespace Gazmon
+
+namespace Gasmon
 {
     class Program
     {
@@ -33,11 +31,8 @@ namespace Gazmon
                 using (StreamReader reader = new StreamReader(response.ResponseStream))
                 {
                     string contents = reader.ReadToEnd();
-                    //Console.WriteLine("Object - " + response.Key);
-                    //Console.WriteLine(" Version Id - " + response.VersionId);
-                    //Console.WriteLine(" Contents - " + contents);
 
-                    //A JsonFile has been created and we are making a list to put the jsonFile information into it
+                    //A JsonFile created. Making a list to put the jsonFile information into it.
                     myJsonDeserialize = JsonConvert.DeserializeObject<List<JsonFile>>(contents);
                     locationsById = myJsonDeserialize.ToDictionary(location => location.id);
 
@@ -48,9 +43,9 @@ namespace Gazmon
                 }
             }
 
-            //Part of the AWSSKD.SimpleNotificationService NuGet package
+            //Part of the AWSSKD.SimpleNotificationService NuGet package.
             var sns = new AmazonSimpleNotificationServiceClient(credentials, RegionEndpoint.EUWest1);
-            //Part of the AWSSDK.SQS NuGet package
+            //Part of the AWSSDK.SQS NuGet package.
             var sqs = new AmazonSQSClient(credentials, RegionEndpoint.EUWest1);
             //The topic ARN supplied
             var myTopicArn = "arn:aws:sns:eu-west-1:552908040772:EventProcessing-UCAS2-snsTopicSensorDataPart1-OVN4WSEGUZ58";
@@ -78,42 +73,7 @@ namespace Gazmon
             do
             {
                 List<Amazon.SQS.Model.Message> messages = (await sqs.ReceiveMessageAsync(new ReceiveMessageRequest(myQueueUrl) { WaitTimeSeconds = 1 })).Messages;
-
-                foreach (var message in messages)
-                {
-                    
-                    var snsMessage = Amazon.SimpleNotificationService.Util.Message.ParseMessage(message.Body);
-                    MessageMsg snsMessageDeserialized = JsonConvert.DeserializeObject<MessageMsg>(snsMessage.MessageText);
-
-                    //Epoching timespam (long to string) and converting to a DateTime type
-                    
-                    DateTime timestampDate = epoch2date(snsMessageDeserialized.timestamp);
-                    
-
-
-                    Console.WriteLine("The MESSAGE is: \n locationId: " + snsMessageDeserialized.locationId +
-                        "\n eventId: " + snsMessageDeserialized.eventId + "\n value: "
-                        + snsMessageDeserialized.value + "\n timestamp: " + snsMessageDeserialized.timestamp
-                         + "\n timestamp: " + timestampDate);
-
-
-                    if (!EventsId.ContainsKey(snsMessageDeserialized.eventId)) //Checking messages are not doubled
-                    {
-                        if (locationsById.ContainsKey(snsMessageDeserialized.locationId)) //making sure just taking messages from our sensors
-                        {
-                            if (timestampDate >= initialTime)
-                            //taking all messages sended during our timespam (1min) even if they arrive late
-                            {
-                                if (timestampDate <= finalTime)
-                                {
-                                    EventsId.TryAdd(snsMessageDeserialized.eventId, snsMessageDeserialized);
-                                }
-
-                            }
-                        }
-
-                    }
-                }
+                CollectMessages(locationsById, EventsId, initialTime, finalTime, messages);
 
             }
             while (DateTime.Now < finalTime);
@@ -148,7 +108,38 @@ namespace Gazmon
             Console.ReadKey();
 
         }
-        
+
+        private static void CollectMessages(Dictionary<string, JsonFile> locationsById, Dictionary<string, MessageMsg> EventsId, DateTime initialTime, DateTime finalTime, List<Amazon.SQS.Model.Message> messages)
+        {
+            foreach (var message in messages)
+            {
+
+                var snsMessage = Amazon.SimpleNotificationService.Util.Message.ParseMessage(message.Body);
+
+                MessageMsg snsMessageDeserialized = JsonConvert.DeserializeObject<MessageMsg>(snsMessage.MessageText);
+
+                DateTime timestampDate = epoch2date(snsMessageDeserialized.timestamp);
+
+                Console.WriteLine("The MESSAGE is: \n locationId: " + snsMessageDeserialized.locationId +
+                    "\n eventId: " + snsMessageDeserialized.eventId + "\n value: "
+                    + snsMessageDeserialized.value + "\n timestamp: " + snsMessageDeserialized.timestamp
+                     + "\n timestamp: " + timestampDate);
+
+
+                if (!EventsId.ContainsKey(snsMessageDeserialized.eventId) &&
+                    locationsById.ContainsKey(snsMessageDeserialized.locationId))
+                {
+                    //Checking messages are not doubled
+                    //making sure just taking messages from our sensors
+                    if (timestampDate >= initialTime && timestampDate <= finalTime)
+                        //taking all messages sended during our timespam (1min) even if they arrive late
+                    {
+                        EventsId.TryAdd(snsMessageDeserialized.eventId, snsMessageDeserialized);
+                    }
+                }
+            }
+        }
+
         private static DateTime epoch2date(long epoch)
         {
             return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddMilliseconds(epoch);

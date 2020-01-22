@@ -1,4 +1,4 @@
-﻿namespace Gazmon
+﻿namespace Gasmon
 {
     internal class UserData
     {
