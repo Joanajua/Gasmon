@@ -9,9 +9,8 @@ using System.IO;
 using System.Collections.Generic;
 using Amazon.SQS.Model;
 using Newtonsoft.Json;
-using System.Timers;
 using System.Linq;
-
+using Amazon.Runtime.CredentialManagement;
 
 namespace Gasmon
 {
@@ -20,8 +19,9 @@ namespace Gasmon
 
         public static async Task Main(string[] args)
         {
+            ///External Credentials
             
-            BasicAWSCredentials credentials = new BasicAWSCredentials("", "");
+            AWSCredentials credentials = GetGasmonCredentials();
             AmazonS3Client amazonS3Client = new AmazonS3Client(credentials, RegionEndpoint.EUWest1);
             List<JsonFile> myJsonDeserialize = new List<JsonFile>();
             Dictionary<string, JsonFile> locationsById;
@@ -65,24 +65,25 @@ namespace Gasmon
 
 
             DateTime initialTime = DateTime.Now;
-            DateTime finalTime = initialTime.AddMinutes(30);
+            DateTime finalTime = initialTime.AddMinutes(6);
             TimeSpan totalTime = finalTime - initialTime;
             Console.WriteLine("The Initial time is: {0}", initialTime);
             
 
             do
             {
-                List<Amazon.SQS.Model.Message> messages = (await sqs.ReceiveMessageAsync(new ReceiveMessageRequest(myQueueUrl) { WaitTimeSeconds = 1 })).Messages;
+                List<Amazon.SQS.Model.Message> messages = (await sqs.ReceiveMessageAsync(new ReceiveMessageRequest(myQueueUrl)
+                { WaitTimeSeconds = 1 })).Messages;
                 CollectMessages(locationsById, EventsId, initialTime, finalTime, messages);
 
             }
             while (DateTime.Now < finalTime);
-            
-            
 
+            ///////////////////////////////////////////////////////////////////////////////////////
+            var listName="file1";
             try
             {
-                string path = @"C:\Work\Training\12.Gasmon\Gasmon\MessagesFiles\file.txt";
+                string path = @"C:\Work\Training\12.Gasmon\Gasmon\MessagesFiles\" + listName+ ".txt";
                 using (StreamWriter file = File.CreateText(path))
                 {
                     foreach(KeyValuePair<string, MessageMsg> keyValuePair in EventsId)
@@ -143,6 +144,13 @@ namespace Gasmon
         private static DateTime epoch2date(long epoch)
         {
             return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddMilliseconds(epoch);
+        }
+
+        static AWSCredentials GetGasmonCredentials()
+        {
+            var chain = new CredentialProfileStoreChain();
+            if (chain.TryGetAWSCredentials("gasmon", out var credentials)) return credentials;
+            throw new InvalidOperationException("Missing AWS profile gasmon");
         }
     }
 }
