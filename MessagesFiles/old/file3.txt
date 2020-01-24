@@ -1,0 +1,34 @@
+LocationId: 1ddbdabc-6981-416c-a1e2-cc8d2905a8c2
+ValueAverage: 8.25074308203636 
+
+LocationId: d2776ae4-c28b-4b57-a617-7a6f235ae8aa
+ValueAverage: 12.7062478703867 
+
+LocationId: da070491-4719-4759-9564-70ea651362ea
+ValueAverage: 9.75053898875108 
+
+LocationId: 3ea5943b-1df2-446f-a637-73788d66efcc
+ValueAverage: 12.3439507173698 
+
+LocationId: 5abc7fae-6b30-4be9-9adf-7e5401c26c4a
+ValueAverage: 11.5017963001825 
+
+LocationId: 3fc04c80-c5b0-472b-888e-4967ad1b50dc
+ValueAverage: 7.28508717396549 
+
+LocationId: eeca7043-5740-4814-8490-cc2011839413
+ValueAverage: 8.12705410946416 
+
+LocationId: 742b25db-49d2-4def-a27b-6b15ea02bb4c
+ValueAverage: 13.8386971710924 
+
+LocationId: 20830801-a893-415f-a8fd-590b333077b0
+ValueAverage: 6.56438673133325 
+
+LocationId: 6d4e7915-5604-4a4b-922a-5c686529274f
+ValueAverage: 10.6030428063022 
+
+
+Initial time : 23/01/2020 16:52:57
+
+Total amount of messages recived was: 294

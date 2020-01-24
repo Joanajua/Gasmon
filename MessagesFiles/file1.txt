@@ -1,34 +1,154 @@
-LocationId: 3fc04c80-c5b0-472b-888e-4967ad1b50dc
-ValueAverage: 7.28184815541779 
+Minute 1	LocationId 13cf0626-ca1b-4f96-852c-b1b87e758f2f	LocationNumber 1	6.87316197762686 
 
-LocationId: 3ea5943b-1df2-446f-a637-73788d66efcc
-ValueAverage: 12.3387434413433 
+Minute 2	LocationId a656bc06-72c7-486f-84aa-61179a9337a6	LocationNumber 2	8.12587240929143 
 
-LocationId: 5abc7fae-6b30-4be9-9adf-7e5401c26c4a
-ValueAverage: 11.483086405715 
+Minute 3	LocationId 295cbf5c-cdfa-4d48-9a2d-803cbfb6a1ac	LocationNumber 3	3.23474001402315 
 
-LocationId: eeca7043-5740-4814-8490-cc2011839413
-ValueAverage: 8.0890917286273 
+Minute 4	LocationId c1a00d4a-b5c0-4d95-a5cc-0ff4e6324416	LocationNumber 4	2.18711294752844 
 
-LocationId: da070491-4719-4759-9564-70ea651362ea
-ValueAverage: 9.75562116143679 
+Minute 5	LocationId 358674f3-482f-4f9b-9c9d-10e3f9872905	LocationNumber 5	4.39517168065327 
 
-LocationId: 1ddbdabc-6981-416c-a1e2-cc8d2905a8c2
-ValueAverage: 8.21578882863468 
+Minute 6	LocationId b0828fee-81aa-4218-bc30-132e0288a7e5	LocationNumber 6	10.0325089122958 
 
-LocationId: 20830801-a893-415f-a8fd-590b333077b0
-ValueAverage: 6.54413822992669 
+Minute 7	LocationId 6d6aa1bf-112e-4720-ba0a-afa39c265bec	LocationNumber 7	6.12272642046487 
 
-LocationId: 6d4e7915-5604-4a4b-922a-5c686529274f
-ValueAverage: 10.5793691667282 
+Minute 8	LocationId f6398630-d72f-4304-8b51-ebe7b9e86d20	LocationNumber 8	6.0173379573925 
 
-LocationId: d2776ae4-c28b-4b57-a617-7a6f235ae8aa
-ValueAverage: 12.6935562614667 
+Minute 9	LocationId d67ce5ec-d7d9-4a3a-8eb4-da531f6ebb2d	LocationNumber 9	7.64608531610348 
 
-LocationId: 742b25db-49d2-4def-a27b-6b15ea02bb4c
-ValueAverage: 13.7905603672953 
+Minute 10	LocationId b8cca975-939c-4fd3-bc1f-02c441aa6bed	LocationNumber 10	5.23917258093319 
+
+Minute 11	LocationId bbbc3e49-4418-44c4-b5d3-8ed3111935b0	LocationNumber 11	4.63162033767668 
+
+Minute 12	LocationId f154f4fb-6352-4615-8796-660c86629c81	LocationNumber 12	5.19064684046886 
+
+Minute 13	LocationId cf7b737f-8998-46ad-856c-71a00afd02c8	LocationNumber 13	1.88506610721668 
+
+Minute 14	LocationId 10bdfdc8-ed49-4bc3-ba6f-6373d00c929c	LocationNumber 14	7.43207532316943 
+
+Minute 15	LocationId 4ea60e5a-b0b9-4ded-a14e-9b78d39e8148	LocationNumber 15	4.09765155011069 
+
+Minute 16	LocationId ba8b8f7e-d17c-40d6-88c7-d86d3746b60c	LocationNumber 16	3.25274738262298 
+
+Minute 17	LocationId dd2e509e-111f-4a06-ab76-1d294df6b983	LocationNumber 17	10.3936267153896 
+
+Minute 18	LocationId ef6278e9-2a26-4cb2-b288-c089ba329b5d	LocationNumber 18	9.3708724296226 
+
+Minute 19	LocationId 8069d66f-5a3d-4e4e-b4ac-c9b4023fa8fc	LocationNumber 19	6.303242590669 
+
+Minute 20	LocationId abf0b811-76f0-4c5e-9129-b132ab057f8a	LocationNumber 20	2.44359285035046 
+
+Minute 21	LocationId c5cc76b9-e018-4ed8-9df8-e18f243f1b34	LocationNumber 21	8.41313667401611 
+
+Minute 22	LocationId d645375c-731b-44e5-828f-272e4303f873	LocationNumber 22	8.06794361201377 
+
+Minute 23	LocationId 5717c82f-5d43-4502-84ce-11ee80d50064	LocationNumber 23	3.8871444509843 
+
+Minute 24	LocationId d6f65b9c-3337-4b00-8c52-25d47f8879cd	LocationNumber 24	5.14005387240256 
+
+Minute 25	LocationId a7fb766b-59c4-41f2-8dd3-22a7e335d1ba	LocationNumber 25	10.6116857529413 
+
+Minute 26	LocationId 67a6fafc-9bee-4365-8a7b-52a9428cb3cd	LocationNumber 26	3.12187651984077 
+
+Minute 27	LocationId 33081dec-c528-4175-b29c-a5f95a1c9062	LocationNumber 27	4.99802779987862 
+
+Minute 28	LocationId b4b28971-7571-4302-9c3f-c370ec5d88de	LocationNumber 28	3.4872308841056 
+
+Minute 29	LocationId 9de98193-74f9-46a2-8f98-253afd8b6ad0	LocationNumber 29	5.73407407508531 
+
+Minute 30	LocationId 5205f378-7e08-4896-8410-3a2edea19d38	LocationNumber 30	9.06913214868008 
+
+Minute 31	LocationId 3b45bfd5-2833-454b-8f29-f699f37c924e	LocationNumber 31	10.233295267091 
+
+Minute 32	LocationId 3b14e4ef-f7b9-4177-9128-b978ade01adb	LocationNumber 32	3.80814002691857 
+
+Minute 33	LocationId 9ccfa479-fc84-4dc8-8a66-855e2d6d3602	LocationNumber 33	9.67143616950014 
+
+Minute 34	LocationId bd24af5e-b556-4dbc-b08d-044841fb3b63	LocationNumber 34	4.9368782993532 
+
+Minute 35	LocationId e5dde7aa-dea6-4d17-a9f3-e5ab55d3fe0e	LocationNumber 35	8.18305115805125 
+
+Minute 36	LocationId c7a7ed57-d733-4b4a-ba11-8ee2653c8739	LocationNumber 36	10.1042620347857 
+
+Minute 37	LocationId 0d2ab9ad-45c6-4c10-8a40-208d2983cecb	LocationNumber 37	10.8785912383147 
+
+Minute 38	LocationId 8dee04d4-6e32-4dbe-857b-801f75510847	LocationNumber 38	3.95707794761109 
+
+Minute 39	LocationId 867bd8c1-1a86-497f-a916-fa97836f8625	LocationNumber 39	10.6129619533883 
+
+Minute 40	LocationId a46e5f33-b87b-4e50-bebb-1424a0d39208	LocationNumber 40	2.93907618676556 
+
+Minute 41	LocationId dfe0c3a9-2264-4cfb-b318-90238ea278b9	LocationNumber 41	10.5028098835292 
+
+Minute 42	LocationId 0065febd-64e6-4ecd-a0c7-d667f354ab04	LocationNumber 42	9.38713034956813 
+
+Minute 43	LocationId 73117e5a-5bd8-4477-855e-fa77d967fba4	LocationNumber 43	6.95773334295842 
+
+Minute 44	LocationId f8340437-290c-4ae3-9271-7428c1e717f0	LocationNumber 44	10.4371251657578 
+
+Minute 45	LocationId b6e40c06-0b0e-45ac-9b73-c40764c30f73	LocationNumber 45	3.35526389655111 
+
+Minute 46	LocationId dd434bc3-ba77-4ae9-b162-dec13fa73f03	LocationNumber 46	8.54119750747233 
+
+Minute 47	LocationId 05dbd4c0-c5b9-403e-bfdb-b5a0f0c9a4e0	LocationNumber 47	4.32241520325807 
+
+Minute 48	LocationId 59241c86-7d8a-4340-9721-fc1337257f02	LocationNumber 48	11.0727131225036 
+
+Minute 49	LocationId 8fd553d5-e2ff-431a-a917-ea0b8ba753c9	LocationNumber 49	2.63397226375596 
+
+Minute 50	LocationId 999b5e35-6f91-4bf0-8d0c-63084312e5f0	LocationNumber 50	8.32485592214922 
+
+Minute 51	LocationId 2fa98a45-b6e6-427b-ba00-a64feece545e	LocationNumber 51	6.10667217028998 
+
+Minute 52	LocationId ac10861f-a6aa-44db-8e24-fb7630b041b0	LocationNumber 52	2.6440807292714 
+
+Minute 53	LocationId 10d08834-7803-4fa1-99e3-3a62fa0f8a39	LocationNumber 53	2.97612005649725 
+
+Minute 54	LocationId 053acd32-1096-4883-87f3-6c5e3b027ec4	LocationNumber 54	7.39172915556403 
+
+Minute 55	LocationId 5a6ba7fd-7fe9-47e9-9a18-8664285001a1	LocationNumber 55	5.20966421639329 
+
+Minute 56	LocationId 72dee830-e1c5-4c33-a24b-dc1a2266c5d2	LocationNumber 56	6.1582463307076 
+
+Minute 57	LocationId 5cad75ec-12e2-4dee-b0b7-27340b337eee	LocationNumber 57	7.00388302436196 
+
+Minute 58	LocationId 6f04f20e-5427-4771-a7c6-efcbc07a7279	LocationNumber 58	3.13503218801969 
+
+Minute 59	LocationId 45510cbd-dee4-42bf-9d1c-98bd1f3f7f46	LocationNumber 59	6.53899606154017 
+
+Minute 60	LocationId 901a5112-f44e-44de-bc30-90bf2cddd86a	LocationNumber 60	9.04862492519077 
+
+Minute 61	LocationId c24cd292-9cff-4530-a668-d0c99ad9f7b7	LocationNumber 61	3.60417774806756 
+
+Minute 62	LocationId 51dcdbe3-3949-47be-a640-bce1004ef5cc	LocationNumber 62	7.48349716220708 
+
+Minute 63	LocationId a4e738df-9a66-4112-af94-68d63b3f4554	LocationNumber 63	3.66513885895488 
+
+Minute 64	LocationId 53f4e155-b06d-4fcd-a56c-f7d868d2259d	LocationNumber 64	4.76406757276364 
+
+Minute 65	LocationId 824247f6-a7a9-40d1-a503-a4f54747bf41	LocationNumber 65	8.22438904371434 
+
+Minute 66	LocationId a47f985c-f158-4ee5-b469-9e485a52a6a1	LocationNumber 66	3.5762973749748 
+
+Minute 67	LocationId f23affc5-d236-465e-840b-60c49bea8c7b	LocationNumber 67	8.04611126757405 
+
+Minute 68	LocationId 1d26a069-912d-4b4c-915d-653f364164fa	LocationNumber 68	4.7450284004714 
+
+Minute 69	LocationId 0b2f3a99-8a68-4aa7-8738-fdf9c261646f	LocationNumber 69	4.30845126109333 
+
+Minute 70	LocationId bbc3490f-e91b-45d4-b115-da9546b57e59	LocationNumber 70	9.34373541150456 
+
+Minute 71	LocationId 24d533a7-b4a9-4c6c-8310-c9717e5dc7c9	LocationNumber 71	9.77586247814287 
+
+Minute 72	LocationId 38a21d0e-a4a3-4a2d-b2a4-4fcd55caee4f	LocationNumber 72	5.67191088783894 
+
+Minute 73	LocationId c9b96899-64ea-46f6-a4fc-0a6ab0378afa	LocationNumber 73	6.63428999217041 
+
+Minute 74	LocationId 60be67fb-3579-4904-9af0-716ca9022502	LocationNumber 74	5.93146570224692 
+
+Minute 75	LocationId 4c16c784-fd1b-48b4-a3db-c39daaeb374d	LocationNumber 75	4.44987682863826 
 
 
-Initial time : 23/01/2020 16:52:57
+Initial time : 24/01/2020 11:26:18
 
-Total amount of messages recived was: 96
+Total amount of messages recived was: 546

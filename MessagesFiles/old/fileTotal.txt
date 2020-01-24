@@ -1,0 +1,189 @@
+Minute 1:
+LocationId: 3fc04c80-c5b0-472b-888e-4967ad1b50dc
+ValueAverage: 7.28184815541779 
+
+LocationId: 3ea5943b-1df2-446f-a637-73788d66efcc
+ValueAverage: 12.3387434413433 
+
+LocationId: 5abc7fae-6b30-4be9-9adf-7e5401c26c4a
+ValueAverage: 11.483086405715 
+
+LocationId: eeca7043-5740-4814-8490-cc2011839413
+ValueAverage: 8.0890917286273 
+
+LocationId: da070491-4719-4759-9564-70ea651362ea
+ValueAverage: 9.75562116143679 
+
+LocationId: 1ddbdabc-6981-416c-a1e2-cc8d2905a8c2
+ValueAverage: 8.21578882863468 
+
+LocationId: 20830801-a893-415f-a8fd-590b333077b0
+ValueAverage: 6.54413822992669 
+
+LocationId: 6d4e7915-5604-4a4b-922a-5c686529274f
+ValueAverage: 10.5793691667282 
+
+LocationId: d2776ae4-c28b-4b57-a617-7a6f235ae8aa
+ValueAverage: 12.6935562614667 
+
+LocationId: 742b25db-49d2-4def-a27b-6b15ea02bb4c
+ValueAverage: 13.7905603672953 
+
+Minute2:
+LocationId: 1ddbdabc-6981-416c-a1e2-cc8d2905a8c2
+ValueAverage: 8.23560665096352 
+
+LocationId: d2776ae4-c28b-4b57-a617-7a6f235ae8aa
+ValueAverage: 12.7003115290942 
+
+LocationId: 5abc7fae-6b30-4be9-9adf-7e5401c26c4a
+ValueAverage: 11.494222678076 
+
+LocationId: 3fc04c80-c5b0-472b-888e-4967ad1b50dc
+ValueAverage: 7.28116993295242 
+
+LocationId: 3ea5943b-1df2-446f-a637-73788d66efcc
+ValueAverage: 12.3461390497453 
+
+LocationId: 742b25db-49d2-4def-a27b-6b15ea02bb4c
+ValueAverage: 13.8145958140891 
+
+LocationId: 6d4e7915-5604-4a4b-922a-5c686529274f
+ValueAverage: 10.5922253837899 
+
+LocationId: da070491-4719-4759-9564-70ea651362ea
+ValueAverage: 9.75279073235388 
+
+LocationId: eeca7043-5740-4814-8490-cc2011839413
+ValueAverage: 8.10782023135227 
+
+LocationId: 20830801-a893-415f-a8fd-590b333077b0
+ValueAverage: 6.5541549619726 
+
+Minute3:
+LocationId: 1ddbdabc-6981-416c-a1e2-cc8d2905a8c2
+ValueAverage: 8.25074308203636 
+
+LocationId: d2776ae4-c28b-4b57-a617-7a6f235ae8aa
+ValueAverage: 12.7062478703867 
+
+LocationId: da070491-4719-4759-9564-70ea651362ea
+ValueAverage: 9.75053898875108 
+
+LocationId: 3ea5943b-1df2-446f-a637-73788d66efcc
+ValueAverage: 12.3439507173698 
+
+LocationId: 5abc7fae-6b30-4be9-9adf-7e5401c26c4a
+ValueAverage: 11.5017963001825 
+
+LocationId: 3fc04c80-c5b0-472b-888e-4967ad1b50dc
+ValueAverage: 7.28508717396549 
+
+LocationId: eeca7043-5740-4814-8490-cc2011839413
+ValueAverage: 8.12705410946416 
+
+LocationId: 742b25db-49d2-4def-a27b-6b15ea02bb4c
+ValueAverage: 13.8386971710924 
+
+LocationId: 20830801-a893-415f-a8fd-590b333077b0
+ValueAverage: 6.56438673133325 
+
+LocationId: 6d4e7915-5604-4a4b-922a-5c686529274f
+ValueAverage: 10.6030428063022 
+
+
+Minute4:
+LocationId: eeca7043-5740-4814-8490-cc2011839413
+ValueAverage: 8.13273003056984 
+
+LocationId: d2776ae4-c28b-4b57-a617-7a6f235ae8aa
+ValueAverage: 12.7116257650473 
+
+LocationId: 742b25db-49d2-4def-a27b-6b15ea02bb4c
+ValueAverage: 13.8500716032759 
+
+LocationId: 1ddbdabc-6981-416c-a1e2-cc8d2905a8c2
+ValueAverage: 8.25262066560892 
+
+LocationId: da070491-4719-4759-9564-70ea651362ea
+ValueAverage: 9.75479871955164 
+
+LocationId: 3ea5943b-1df2-446f-a637-73788d66efcc
+ValueAverage: 12.3285579509304 
+
+LocationId: 5abc7fae-6b30-4be9-9adf-7e5401c26c4a
+ValueAverage: 11.5062754149124 
+
+LocationId: 3fc04c80-c5b0-472b-888e-4967ad1b50dc
+ValueAverage: 7.3009069102283 
+
+LocationId: 20830801-a893-415f-a8fd-590b333077b0
+ValueAverage: 6.56499185878434 
+
+LocationId: 6d4e7915-5604-4a4b-922a-5c686529274f
+ValueAverage: 10.5992158923284 
+
+Minute 5:
+LocationId: 3fc04c80-c5b0-472b-888e-4967ad1b50dc
+ValueAverage: 7.31880575450403 
+
+LocationId: 6d4e7915-5604-4a4b-922a-5c686529274f
+ValueAverage: 10.5912044477767 
+
+LocationId: eeca7043-5740-4814-8490-cc2011839413
+ValueAverage: 8.13403322786744 
+
+LocationId: d2776ae4-c28b-4b57-a617-7a6f235ae8aa
+ValueAverage: 12.7177610837854 
+
+LocationId: 742b25db-49d2-4def-a27b-6b15ea02bb4c
+ValueAverage: 13.8572157936957 
+
+LocationId: 1ddbdabc-6981-416c-a1e2-cc8d2905a8c2
+ValueAverage: 8.2505285551002 
+
+LocationId: da070491-4719-4759-9564-70ea651362ea
+ValueAverage: 9.76237568841195 
+
+LocationId: 3ea5943b-1df2-446f-a637-73788d66efcc
+ValueAverage: 12.3099313336721 
+
+LocationId: 5abc7fae-6b30-4be9-9adf-7e5401c26c4a
+ValueAverage: 11.5083995243319 
+
+LocationId: 20830801-a893-415f-a8fd-590b333077b0
+ValueAverage: 6.56212923929417 
+
+Minute6:
+LocationId: 3fc04c80-c5b0-472b-888e-4967ad1b50dc
+ValueAverage: 7.32651890659367 
+
+LocationId: 6d4e7915-5604-4a4b-922a-5c686529274f
+ValueAverage: 10.5952986698649 
+
+LocationId: d2776ae4-c28b-4b57-a617-7a6f235ae8aa
+ValueAverage: 12.7297239873492 
+
+LocationId: eeca7043-5740-4814-8490-cc2011839413
+ValueAverage: 8.13052635102575 
+
+LocationId: 742b25db-49d2-4def-a27b-6b15ea02bb4c
+ValueAverage: 13.8685229960512 
+
+LocationId: 1ddbdabc-6981-416c-a1e2-cc8d2905a8c2
+ValueAverage: 8.26147245955134 
+
+LocationId: da070491-4719-4759-9564-70ea651362ea
+ValueAverage: 9.77625105066545 
+
+LocationId: 3ea5943b-1df2-446f-a637-73788d66efcc
+ValueAverage: 12.2999179940351 
+
+LocationId: 5abc7fae-6b30-4be9-9adf-7e5401c26c4a
+ValueAverage: 11.5085565351499 
+
+LocationId: 20830801-a893-415f-a8fd-590b333077b0
+ValueAverage: 6.56293310005622 
+
+
+

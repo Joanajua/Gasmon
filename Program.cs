@@ -27,7 +27,7 @@ namespace Gasmon
 
             var sns = new AmazonSimpleNotificationServiceClient(credentials, RegionEndpoint.EUWest1);
             var sqs = new AmazonSQSClient(credentials, RegionEndpoint.EUWest1);
-            var myTopicArn = "arn:aws:sns:eu-west-1:552908040772:EventProcessing-UCAS2-snsTopicSensorDataPart1-OVN4WSEGUZ58";
+            var myTopicArn = "arn:aws:sns:eu-west-1:552908040772:EventProcessing-UCAS2-snsTopicSensorDataPart2-6SW9NJKW1LZ9";
 
             var myQueueName = "Joana-GasMon-" + Guid.NewGuid();
             var myQueueUrl = (await sqs.CreateQueueAsync(myQueueName)).QueueUrl;
@@ -35,36 +35,35 @@ namespace Gasmon
             await sns.SubscribeQueueAsync(myTopicArn, sqs, myQueueUrl);
 
 
-
-            
-
-
             DateTime initTime = DateTime.Now;
-            Console.WriteLine("The Initial time is: {0}", initTime);
             DateTime finalTime = initTime.AddMinutes(6);
-           
+            Console.WriteLine("The Initial time is: {0}", initTime);
+            var fileName = "";
 
+            List<Amazon.SQS.Model.Message> sqsmessages;
             for (int i = 0; i < 6; i++)
             {
                 Dictionary<string, MessageMsg> dictionary = new Dictionary<string, MessageMsg>();
                 DateTime loopTime = initTime.AddMinutes(i + 1);
                 do
                 {
-                    List<Amazon.SQS.Model.Message> messages = (await sqs.ReceiveMessageAsync(new ReceiveMessageRequest(myQueueUrl)
+                    sqsmessages = (await sqs.ReceiveMessageAsync(new ReceiveMessageRequest(myQueueUrl)
                     { WaitTimeSeconds = 1 })).Messages;
-                    LoopingMessages(locationsById, dictionary, initTime, finalTime, messages);
+                    GetMessages(locationsById, dictionary, initTime, finalTime, sqsmessages);
+                    
+                    var receipHandle = sqsmessages.Select(r => new DeleteMessageBatchRequestEntry(r.MessageId,r.ReceiptHandle));
+                    await sqs.DeleteMessageBatchAsync(myQueueUrl, receipHandle.ToList());
+                    
                 }
                 while (DateTime.Now < loopTime);
 
-                var fileName = "";
-                fileName = WritingFile(dictionary, i, fileName, initTime);
-   
+                fileName = WriteFile(dictionary, i, fileName, initTime);
             }
 
 
             Console.WriteLine("The Final time is: {0}", finalTime);
 
-
+            
             Console.ReadKey();
 
         }
@@ -74,7 +73,7 @@ namespace Gasmon
             List<JsonFile> myJsonDeserialize = new List<JsonFile>();
             Dictionary<string, JsonFile> locationsById;
 
-            using (var response = await amazonS3Client.GetObjectAsync("eventprocessing-ucas2-locationss3bucket-1dfub0iyuq3av", "locations.json"))
+            using (var response = await amazonS3Client.GetObjectAsync("eventprocessing-ucas2-locationss3bucket-1dfub0iyuq3av", "locations-part2.json"))
             {
                 using (StreamReader reader = new StreamReader(response.ResponseStream))
                 {
@@ -93,7 +92,7 @@ namespace Gasmon
             return locationsById;
         }
 
-        private static string WritingFile(Dictionary<string, MessageMsg> dictionary, int i, string fileName, DateTime initTime)
+        private static string WriteFile(Dictionary<string, MessageMsg> dictionary, int i, string fileName, DateTime initTime)
         {
             try
             {
@@ -101,18 +100,20 @@ namespace Gasmon
                 string path = @"C:\Work\Training\12.Gasmon\Gasmon\MessagesFiles\" + fileName + ".txt";
                 using (StreamWriter file = File.CreateText(path))
                 {
+                    int n = 1;
+                    int minute = 1;
                     foreach (var group in dictionary.Values.GroupBy(l => l.locationId))
                     {
                         var locationId = group.Key;
+                        var locationNumber = n;
                         double average = group.Average(l => l.value);
-                        file.Write("LocationId: {0}\nValueAverage: {1} \n\n",
-                            locationId, average);
+                       
+                        file.Write("Minute " + minute + "\tLocationId {0}\tLocationNumber {1}\t{2} \n\n",
+                            locationId, locationNumber, average);
+                        ++n;
+                        minute++;
                     }
-                    //foreach (KeyValuePair<string, MessageMsg> keyValuePair in dictionary)
-                    //{
-                    //    file.Write("LocationId: {0}\nValue: {1}\nEventId: {2}\n\n",
-                    //        keyValuePair.Key, keyValuePair.Value.locationId, keyValuePair.Value.value);
-                    //}
+                   
 
                     file.Write("\nInitial time : {0}\n\n" +
                         "Total amount of messages recived was: {1}", initTime, dictionary.Count);
@@ -126,7 +127,7 @@ namespace Gasmon
             return fileName;
         }
 
-        private static void LoopingMessages(Dictionary<string, JsonFile> locationsById, Dictionary<string, MessageMsg>
+        private static void GetMessages(Dictionary<string, JsonFile> locationsById, Dictionary<string, MessageMsg>
             dictionary, DateTime initialTime, DateTime finalTime, List<Message> messages)
         {
 

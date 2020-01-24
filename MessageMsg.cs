@@ -10,6 +10,7 @@ namespace Gasmon
         public string eventId { get; set; }
         public double value { get; set; }
         public long timestamp { get; set; }
+        
 
     }
     
